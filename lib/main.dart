@@ -17,20 +17,7 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   List<Widget> meroWidget = <Widget>[
-    Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: Container(
-        height: 100,
-        width: double.infinity,
-        color: Color(0xFF2944F7),
-        child: Center(
-          child: Text(
-            "Welcome to Home",
-            style: TextStyle(fontSize: 50, color: Colors.white),
-          ),
-        ),
-      ),
-    ),
+    HamtoOption(),
     Container(
       child: Center(
         child: Text("Welcome to Container"),
@@ -68,6 +55,30 @@ class _MainPageState extends State<MainPage> {
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
+      ),
+    );
+  }
+}
+
+class HamtoOption extends StatelessWidget {
+  const HamtoOption({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: Container(
+        height: 100,
+        width: double.infinity,
+        color: Color(0xFF2944F7),
+        child: Center(
+          child: Text(
+            "Welcome to Home",
+            style: TextStyle(fontSize: 50, color: Colors.white),
+          ),
+        ),
       ),
     );
   }
